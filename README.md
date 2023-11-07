@@ -17,3 +17,23 @@ Adapted from https://www.youtube.com/watch?v=ev3-y9G8N70
     - Values: https://docs.jboss.org/hibernate/orm/4.1/devguide/en-US/html_single/#services-JtaPlatform
 
 3. You do not need Gradle for this. ```./gradlew bootRun``` is enough.
+
+## Connecting to Database
+
+### Entity
+
+An entity is basically a schema definition. In `src/main/java/com/genuinecoder/springserver/model/employee`, we define the schema for employee in `Employee.java`.
+
+- `@Entity` tag helps to point Springboot to schema definition
+- `@Id` tag defines the primary key
+- `@GeneratedValue(strategy = GenerationType.IDENTITY)` lets the field auto-increment for each object it creates
+- `@Table(name = "employees")` helps to define the nam of table and allow auto creation.
+
+### Repository
+
+A repository is basically an interface for the entity - what are the operations allowed with this schema. `@Repository` tag helps to define the interface as a repository.
+
+SpringBoot provides `CrudRepository` interface. Any interface that extends this will inherit the CRUD methods that come out of the box with SpringBoot.
+
+### DAO
+DAO is a Data Access Object. Any read or writes to database goes through this object, it should be a singleton for each schema object. Defines how backend interacts with database through repository.
