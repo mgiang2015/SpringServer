@@ -13,9 +13,10 @@ public class EmployeeDao {  // DAO: Data Access Object. Essentially object that 
     private EmployeeRepository repository; // Dependency Injection! Automatically gives you an object, autowire helps you use internal implementation
 
     // Logic for C
-    public void save(Employee employee) {
+    // We want to return object because we want to provide a helpful response along with HTTP response code
+    public Employee save(Employee employee) {
         // Done, implementation provided by repository. SHEEEEESH
-        repository.save(employee);
+        return repository.save(employee);
     }
 
     // Logic for R

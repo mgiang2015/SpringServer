@@ -18,6 +18,8 @@ Adapted from https://www.youtube.com/watch?v=ev3-y9G8N70
 
 3. You do not need Gradle for this. ```./gradlew bootRun``` is enough.
 
+4. We will design this program following MVC (Model View Control) design pattern.
+
 ## Connecting to Database
 
 ### Entity
@@ -28,6 +30,7 @@ An entity is basically a schema definition. In `src/main/java/com/genuinecoder/s
 - `@Id` tag defines the primary key
 - `@GeneratedValue(strategy = GenerationType.IDENTITY)` lets the field auto-increment for each object it creates
 - `@Table(name = "employees")` helps to define the nam of table and allow auto creation.
+employee
 
 ### Repository
 
@@ -36,4 +39,17 @@ A repository is basically an interface for the entity - what are the operations 
 SpringBoot provides `CrudRepository` interface. Any interface that extends this will inherit the CRUD methods that come out of the box with SpringBoot.
 
 ### DAO
-DAO is a Data Access Object. Any read or writes to database goes through this object, it should be a singleton for each schema object. Defines how backend interacts with database through repository.
+
+DAO is a Data Access Object. Any read or writes to database goes through this object, it should be a singleton for each schema object. Defines how backend interacts with database through repository.employee
+
+DAO can then be easily injected into any other class / objects that needs data about Employees.
+
+### REST API
+
+REST API is defined in the controller folder.
+
+1. First we inject the `EmployeeDao` into the controller using `@Autowired` tag
+
+2. Define `GET` handlers using `@GetMapping(URL)` tag and write a method for handling. Return results are automatically formatted to JSON for response.
+
+3. Define `POST` handlers using `@PostMapping(URL)` tag and write a method for handling. Method must take in `@RequestBody Type name` for this program
