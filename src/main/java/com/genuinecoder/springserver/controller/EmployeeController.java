@@ -23,7 +23,7 @@ public class EmployeeController {
     }
 
     @PostMapping("/employee/save") 
-    public void save(@RequestBody Employee employee) {  // Employee object will be parsed into an object automatically
-        employeeDao.save((employee));
+    public Employee save(@RequestBody Employee employee) {  // Employee object will be parsed into an object automatically
+        return employeeDao.save((employee));
     }
 }
