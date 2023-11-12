@@ -2,7 +2,21 @@
 
 Adapted from https://www.youtube.com/watch?v=ev3-y9G8N70
 
-## Setting up
+
+## Running this server
+
+1. Pre-requisites
+
+- (MySQL)[https://dev.mysql.com/doc/mysql-getting-started/en/]
+- (Java 17)[https://www.oracle.com/java/technologies/downloads/] or later
+
+2. Running the project
+
+- Navigate to root folder
+- Execute the following command `./gradlew bootRun`
+
+
+## Building progress
 
 1. This project dependency included JPA as a dependency. This requires some configuration.
 
