@@ -7,8 +7,8 @@ Adapted from https://www.youtube.com/watch?v=ev3-y9G8N70
 
 1. Pre-requisites
 
-- (MySQL)[https://dev.mysql.com/doc/mysql-getting-started/en/]
-- (Java 17)[https://www.oracle.com/java/technologies/downloads/] or later
+- [MySQL](https://dev.mysql.com/doc/mysql-getting-started/en/)
+- [Java 17](https://www.oracle.com/java/technologies/downloads/) or later
 
 2. Running the project
 
