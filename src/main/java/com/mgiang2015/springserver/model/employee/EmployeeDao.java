@@ -1,4 +1,4 @@
-package com.genuinecoder.springserver.model.employee;
+package com.mgiang2015.springserver.model.employee;
 
 import java.util.List;
 

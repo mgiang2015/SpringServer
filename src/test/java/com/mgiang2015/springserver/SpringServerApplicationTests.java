@@ -1,11 +1,11 @@
-package com.genuinecoder.springserver;
+package com.mgiang2015.springserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.genuinecoder.springserver.model.employee.Employee;
-import com.genuinecoder.springserver.model.employee.EmployeeDao;
+import com.mgiang2015.springserver.model.employee.Employee;
+import com.mgiang2015.springserver.model.employee.EmployeeDao;
 
 @SpringBootTest
 class SpringServerApplicationTests {

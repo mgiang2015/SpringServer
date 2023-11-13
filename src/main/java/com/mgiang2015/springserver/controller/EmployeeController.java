@@ -1,4 +1,4 @@
-package com.genuinecoder.springserver.controller;
+package com.mgiang2015.springserver.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.genuinecoder.springserver.model.employee.Employee;
-import com.genuinecoder.springserver.model.employee.EmployeeDao;
+import com.mgiang2015.springserver.model.employee.Employee;
+import com.mgiang2015.springserver.model.employee.EmployeeDao;
 
 import java.util.List;
 
